@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击显示时间</title>
+    <style>
+        .time-button {
+            width: 400px;
+            height: 200px;
+            font-size: 40px;
+            color: #fff;
+            background: linear-gradient(135deg, #ff6b6b, #f06595);
+            border: none;
+            border-radius: 10px;
+            margin: 100px 280px;
+            cursor: pointer;
+        }
+
+        .time-box {
+            display: none;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            border-color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="time-button" onclick="showTime(); setInterval(showTime, 1000);">What time is it?</button>
+    <div class="time">
+        <div class="time-box" id="timeBox"></div>
+    </div>
+    <script>
+        function showTime() {
+            var timeBox = document.getElementById("timeBox");
+            var now = new Date();
+            now.setFullYear(2026, 8, 1);
+            timeBox.innerHTML = now;
+            timeBox.style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>
