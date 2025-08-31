@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./登录.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+    <div class="login-slide">
+        <img class="slide-img" src="../images/屏幕截图_31-8-2025_8568_cn.account.xiaomi.com.jpeg" alt="">
+    </div>
+    <div class="header">
+        <img class="login-img" src="../images/logo-mi2.png" alt="">
+        <h1 class="login-title">小米账号</h1>
+        <div class="nav">
+            <a class="item" href="#">用户协议</a>
+            <a class="item" href="#">隐私政策</a>
+            <a class="item" href="#">帮助中心</a>
+            <a class="item" href="#">中文</a>
+        </div>
+    </div>
+    <div class="login-container">
+
+        <div class="login-box">
+            <div class="login">
+                <h2 class="login-h2">登录</h2>
+            </div>
+            <div class="input-box">
+                <input type="text" id="loginInput">
+                <label class="login-text">账号</label>
+                <input type="password" id="password">
+                <label class="password-text">密码</label>
+                <button>登录</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const loginBox = document.getElementById('loginInput');
+        const loginText = document.querySelector('.login-text');
+
+        // 监听点击事件
+        loginBox.addEventListener('click', function () {
+            loginText.classList.add('active-text');
+        });
+
+        // 点击外部时恢复原状
+        document.addEventListener('click', function (event) {
+            if (!loginBox.contains(event.target)) {
+                // 如果输入框为空才恢复
+                if (loginBox.value === '') {
+                    loginText.classList.remove('active-text');
+                }
+            }
+        });
+        const passwordBox = document.getElementById('password');
+        const passwordText = document.querySelector('.password-text');
+        // 监听点击事件
+        passwordBox.addEventListener('click', function () {
+            passwordText.classList.add('password-active-text');
+        });
+        // 点击外部时恢复原状
+        document.addEventListener('click', function (event) {
+            if (!passwordBox.contains(event.target)) {
+                // 如果输入框为空才恢复
+                if (passwordBox.value === '') {
+                    passwordText.classList.remove('password-active-text');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

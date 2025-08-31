@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.login-slide {
+    width: 375px;
+    height: 941.33px;
+    background: #f06262;
+    position: absolute;
+}
+
+.slide-img {
+    width: 375px;
+    height: 941.33px;
+}
+
+/*                   */
+.header {
+    width: 1309px;
+    height: 80px;
+    position: absolute;
+    background: black;
+    left: 375px;
+    padding: 20px;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+
+.login-img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.login-title {
+    font-size: 26px;
+    color: #e0e0e0;
+    margin-left: 10px;
+    vertical-align: top;
+    font-weight: 500;
+    float: left;
+}
+
+.nav {
+    float: right;
+}
+
+.item {
+    margin: 0 10px;
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+.item:hover {
+    color: #ff6700;
+}
+
+/*                   */
+.login-container {
+    width: 1349px;
+    height: 860px;
+    background: black;
+    position: absolute;
+    left: 375px;
+    top: 80px;
+}
+
+
+.login-box {
+    position: absolute;
+    width: 400px;
+    height: 547px;
+    margin: auto;
+    background: rgb(163, 163, 163, 0.2);
+    left: 474.5px;
+    top: 150px;
+    border-radius: 5px;
+}
+
+.login-h2 {
+    font-size: 30px;
+    color: #e0e0e0;
+    text-align: left;
+    margin: 50px;
+    font-size: 25px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    left: 50px;
+    top: 120px;
+}
+
+.input-box input {
+    height: 53px;
+    border-radius: 3px;
+    text-indent: 15px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    padding-top: 10px;
+}
+
+.login-text {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    transform: translateY(0);
+    pointer-events: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.login-box:focus+.login-text,
+.active-text {
+    font-size: 12px;
+    top: 16px;
+    color: #999;
+    transform: translateY(-50%);
+
+}
+
+.password-text {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    transform: translateY(0);
+    pointer-events: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+
+.password-box:focus+.password-text,
+.password-active-text {
+    font-size: 12px;
+    top: 105px;
+    color: #999;
+    transform: translateY(-70%);
+
+}
+
+.input-box button {
+    border: none;
+    height: 60px;
+    background-color: #ff6700;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 50px;
+    cursor: pointer;
+}
